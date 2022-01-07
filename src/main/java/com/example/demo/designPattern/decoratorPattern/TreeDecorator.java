@@ -1,13 +1,16 @@
 package com.example.demo.designPattern.decoratorPattern;
 
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public abstract class TreeDecorator implements ChristmasTree {
+
     private ChristmasTree christmasTree;
 
+    public TreeDecorator(ChristmasTree christmasTree) {
+        this.christmasTree = christmasTree;
+    }
+
     @Override
-    public String decorate(){
+    public String decorate() {
         return christmasTree.decorate();
     }
 }

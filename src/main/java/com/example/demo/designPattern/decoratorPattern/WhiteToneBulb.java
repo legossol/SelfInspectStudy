@@ -4,11 +4,11 @@ public class WhiteToneBulb extends TreeDecorator{
     public WhiteToneBulb(ChristmasTree christmasTree){
         super(christmasTree); //이곳이 포인트
     }
-    public String addWhiteToneBulb(){
+    private String addWhiteToneBulb(){
         return "with whiteBulbTree";
     }
-    @Override
+
     public String decorate(){
-        return super.decorate() + addWhiteBulb(); //이곳이 포인트
+        return super.decorate() + addWhiteToneBulb(); //이곳이 포인트
     }
 }

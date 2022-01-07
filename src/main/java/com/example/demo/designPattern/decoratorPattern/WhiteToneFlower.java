@@ -4,7 +4,7 @@ public class WhiteToneFlower extends TreeDecorator{
     public WhiteToneFlower(ChristmasTree christmasTree){
         super(christmasTree); //이곳이 포인트
     }
-    public String addWhiteToneFlower(){
+    private String addWhiteToneFlower(){
         return "with whiteBulbTree";
     }
     @Override

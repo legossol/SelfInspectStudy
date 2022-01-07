@@ -14,6 +14,9 @@ class Circle implements Shape{
     private int y;
     private int radius;
 
+    public Circle(String color) {
+    }
+
     @Override
     public void draw() {
         System.out.println("Circle color= "+color+",x = "+x+"y = "+y+",radius = "+radius);
@@ -25,7 +28,7 @@ class ShapeFactory{
     public static Shape getCircle(String color){
         Circle circle = circleMap.get(color);
 
-        ir(circle == null){
+        if(circle == null){
             circle = new Circle(color);
             circleMap.put(color,circle);
             System.out.println("new obejct generated =" + color + " color");
